@@ -4,6 +4,11 @@ import { useState } from "react";
 import heroImage from "@/assets/heya-salon-hero.jpg";
 import lashImage from "@/assets/heya-lash-team.jpg";
 import teamImage from "@/assets/heya-team-work.jpg";
+import tabletAsset from "@/assets/mockup-tablet.png.asset.json";
+import kioskAsset from "@/assets/kiosk.png.asset.json";
+import posFrontAsset from "@/assets/pos-front.png.asset.json";
+import posBackAsset from "@/assets/pos-back.png.asset.json";
+import smsAsset from "@/assets/sms-reminder.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
