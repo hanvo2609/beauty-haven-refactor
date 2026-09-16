@@ -114,7 +114,7 @@ function Index() {
                   <h3 className="font-display text-3xl">Checkout without the queue.</h3>
                   <p className="mt-3 text-sm leading-6 text-muted-foreground">Take card, cash or split payments on hardware built for busy Saturdays—receipts, drawer and all.</p>
                 </div>
-                <img src={posBackAsset.url" alt="Customer-facing Heya POS display showing an order total with rewards progress" loading="lazy" className="w-full object-cover"/>
+                <img src={posBackAsset.url} alt="Customer-facing Heya POS display showing an order total with rewards progress" loading="lazy" className="w-full object-cover"/>
               </div>
             </div>
           </div>
