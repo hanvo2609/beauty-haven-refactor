@@ -4,6 +4,11 @@ import { useState } from "react";
 import heroImage from "@/assets/heya-salon-hero.jpg";
 import lashImage from "@/assets/heya-lash-team.jpg";
 import teamImage from "@/assets/heya-team-work.jpg";
+import tabletAsset from "@/assets/mockup-tablet.png.asset.json";
+import kioskAsset from "@/assets/kiosk.png.asset.json";
+import posFrontAsset from "@/assets/pos-front.png.asset.json";
+import posBackAsset from "@/assets/pos-back.png.asset.json";
+import smsAsset from "@/assets/sms-reminder.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
@@ -78,6 +83,45 @@ function Index() {
           <div><p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Everything in rhythm</p><h2 className="mt-5 max-w-md font-display text-6xl leading-[0.95] md:text-8xl">Less admin.<br/><i>More people.</i></h2></div>
           <div className="border-t editorial-rule">
             {features.map(({ number, icon: Icon, title, copy }) => <article key={number} className="grid gap-5 border-b editorial-rule py-8 md:grid-cols-[70px_1fr_1fr] md:items-start"><span className="font-display text-3xl text-primary">{number}</span><h3 className="flex items-center gap-3 font-display text-3xl"><Icon size={22}/>{title}</h3><p className="leading-7 text-muted-foreground">{copy}</p></article>)}
+          </div>
+        </div>
+      </section>
+
+      <section id="hardware" className="border-t editorial-rule">
+        <div className="mx-auto grid max-w-[1400px] gap-12 px-5 py-24 md:px-10 md:py-36 lg:grid-cols-[0.55fr_0.45fr] lg:items-end">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">One system, every screen</p>
+            <h2 className="mt-5 font-display text-6xl leading-[0.95] md:text-7xl">Made for the front desk—and the pocket.</h2>
+            <p className="mt-7 max-w-md leading-7 text-muted-foreground">The calendar your team loves on the counter, a self check-in kiosk at the door, and confirmations your clients actually read.</p>
+            <div className="relative mt-12">
+              <div className="overflow-hidden bg-secondary">
+                <img src={tabletAsset.url} alt="Heya POS calendar on a tablet beside a client booking confirmation on a phone" loading="lazy" className="w-full object-cover"/>
+              </div>
+              <div className="absolute -bottom-10 -right-3 w-28 rotate-3 border-4 border-background shadow-xl md:-right-8 md:w-40">
+                <img src={smsAsset.url} alt="Phone showing a friendly SMS appointment reminder from a salon" loading="lazy" className="w-full object-cover"/>
+              </div>
+            </div>
+          </div>
+          <div className="grid gap-10">
+            <div className="grid grid-cols-[0.45fr_0.55fr] items-end gap-6">
+              <img src={kioskAsset.url} alt="Heya self check-in kiosk greeting clients at the salon entrance" loading="lazy" className="w-full"/>
+              <div className="border-t editorial-rule pb-2 pt-5">
+                <h3 className="font-display text-3xl">Walk-ins check themselves in.</h3>
+                <p className="mt-3 text-sm leading-6 text-muted-foreground">Clients tap their number, the roster updates itself, and your team keeps both hands free.</p>
+              </div>
+            </div>
+            <div className="grid gap-6">
+              <div className="overflow-hidden bg-secondary">
+                <img src={posFrontAsset.url} alt="Heya POS register with calendar, receipt printer, cash drawer and card terminal" loading="lazy" className="w-full object-cover"/>
+              </div>
+              <div className="grid grid-cols-[0.55fr_0.45fr] items-end gap-6">
+                <div className="border-t editorial-rule pb-2 pt-5">
+                  <h3 className="font-display text-3xl">Checkout without the queue.</h3>
+                  <p className="mt-3 text-sm leading-6 text-muted-foreground">Take card, cash or split payments on hardware built for busy Saturdays—receipts, drawer and all.</p>
+                </div>
+                <img src={posBackAsset.url} alt="Customer-facing Heya POS display showing an order total with rewards progress" loading="lazy" className="w-full object-cover"/>
+              </div>
+            </div>
           </div>
         </div>
       </section>
