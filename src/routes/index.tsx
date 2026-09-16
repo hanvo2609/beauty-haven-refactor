@@ -93,8 +93,13 @@ function Index() {
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">One system, every screen</p>
             <h2 className="mt-5 font-display text-6xl leading-[0.95] md:text-7xl">Made for the front desk—and the pocket.</h2>
             <p className="mt-7 max-w-md leading-7 text-muted-foreground">The calendar your team loves on the counter, a self check-in kiosk at the door, and confirmations your clients actually read.</p>
-            <div className="relative mt-12 overflow-hidden bg-secondary">
-              <img src={tabletAsset.url} alt="Heya POS calendar on a tablet beside a client booking confirmation on a phone" loading="lazy" className="w-full object-cover"/>
+            <div className="relative mt-12">
+              <div className="overflow-hidden bg-secondary">
+                <img src={tabletAsset.url} alt="Heya POS calendar on a tablet beside a client booking confirmation on a phone" loading="lazy" className="w-full object-cover"/>
+              </div>
+              <div className="absolute -bottom-10 -right-3 w-28 rotate-3 border-4 border-background shadow-xl md:-right-8 md:w-40">
+                <img src={smsAsset.url} alt="Phone showing a friendly SMS appointment reminder from a salon" loading="lazy" className="w-full object-cover"/>
+              </div>
             </div>
           </div>
           <div className="grid gap-10">
